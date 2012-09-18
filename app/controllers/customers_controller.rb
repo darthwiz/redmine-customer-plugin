@@ -10,11 +10,11 @@ class CustomersController < ApplicationController
   end
   
   def list
-    #@customers = Customer.find(:all)
+    @customers = Customer.all
   end
 
   def select
-    #@customers = Customer.find(:all)
+    @customers = Customer.all
   end
   
   def assign

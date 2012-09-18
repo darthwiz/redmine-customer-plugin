@@ -1,7 +1,7 @@
 # Redmine customer plugin
 require 'redmine'
 
-RAILS_DEFAULT_LOGGER.info 'Starting Customer plugin for RedMine'
+#RAILS_DEFAULT_LOGGER.info 'Starting Customer plugin for RedMine'
 
 Redmine::Plugin.register :customer_plugin do
   name 'Customer plugin'
@@ -22,3 +22,5 @@ Redmine::Plugin.register :customer_plugin do
 
   menu :project_menu, :customers, {:controller => 'customers', :action => 'show'}, :caption => :customer_title
 end
+
+Project.belongs_to :customer
