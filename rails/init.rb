@@ -23,4 +23,6 @@ Redmine::Plugin.register :customer_plugin do
   menu :project_menu, :customers, {:controller => 'customers', :action => 'show'}, :caption => :customer_title
 end
 
-Project.belongs_to :customer
+ActionDispatch::Reloader.to_prepare do
+  Project.belongs_to :customer
+end
